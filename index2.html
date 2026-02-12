@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2: Estructuras Completas</title>
+</head>
+<body>
+
+    <nav>
+        <h2>Contenidos de la clase</h2>
+        <ul>
+            <li><a href="#video">Ir al Video de YouTube</a></li>
+            <li><a href="#tabla">Ver Tabla de Datos</a></li>
+            <li><a href="#formulario">Ir al Formulario Avanzado</a></li>
+            <li><a href="#web-externa">Ver Dólar Hoy</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <section id="tabla">
+        <h3>Lista de Precios (Tabla)</h3>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio (USD)</th>
+                    <th>Disponibilidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Procesador i7</td>
+                    <td>Hardware</td>
+                    <td>350</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Memoria RAM 16GB</td>
+                    <td>Hardware</td>
+                    <td>80</td>
+                    <td>Pocas unidades</td>
+                </tr>
+                <tr>
+                    <td>Monitor 27"</td>
+                    <td>Periféricos</td>
+                    <td>250</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Teclado Mecánico</td>
+                    <td>Periféricos</td>
+                    <td>120</td>
+                    <td>Agotado</td>
+                </tr>
+                <tr>
+                    <td>Placa de Video</td>
+                    <td>Hardware</td>
+                    <td>600</td>
+                    <td>En stock</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="formulario">
+        <h3>Formulario de Inscripción</h3>
+        <form>
+            <label>Nombre completo:</label><br>
+            <input type="text" name="nombre" required>
+            <br><br>
+
+            <label>¿Cómo nos conociste?</label><br>
+            <select name="fuente">
+                <option value="google">Buscador Google</option>
+                <option value="ig">Instagram</option>
+                <option value="amigo">Recomendación</option>
+                <option value="otro">Otro</option>
+            </select>
+            <br><br>
+
+            <label>Turno de preferencia:</label><br>
+            <input type="radio" id="mañana" name="turno" value="mañana">
+            <label for="mañana">Mañana</label><br>
+            <input type="radio" id="tarde" name="turno" value="tarde">
+            <label for="tarde">Tarde</label>
+            <br><br>
+
+            <label>Mensaje o dudas:</label><br>
+            <textarea name="mensaje" rows="4" cols="30"></textarea>
+            <br><br>
+
+            <button type="submit">Enviar Registro</button>
+        </form>
+    </section>
+
+    <hr>
+
+
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/ptc4Awb0UpU?si=J7_d4_CEKCS7tCX1">
+</iframe>
+
+<br>
+
+<section id="seccion-embebidos">
+    <h2>Contenido Externo (YouTube y Web)</h2>
+    
+    <p><strong>Video de YouTube (Link estable):</strong></p>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://youtu.be/QdnbNH3YMWc" 
+        title="Video de prueba" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+</section>
+
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
+
+<section>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ptc4Awb0UpU?si=J7_d4_CEKCS7tCX1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>    
+
+<hr>
+
+    <section id="web-externa">
+        <h3>Página de Dólar Hoy</h3>
+        <p><i>Nota para la clase: Si el recuadro sale en blanco, es porque DolarHoy bloquea la visualización dentro de otras webs por seguridad (X-Frame-Options).</i></p>
+        <iframe src="https://dolarhoy.com/" width="100%" height="400"></iframe>
+    </section>
+
+    <br>
+    <a href="#">Volver al inicio de la página</a>
+
+</body>
+</html>
