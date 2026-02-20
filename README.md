@@ -4,6 +4,21 @@ Esta guía sirve como un resumen práctico de los fundamentos de HTML5, ideal pa
 
 > 📚 **Documentación de interés:** Para profundizar en cada etiqueta y ver ejemplos interactivos, te recomendamos visitar [W3Schools - HTML Tutorial](https://www.w3schools.com/html/).
 
+## 🔍 Índice de Contenidos
+1. [¿Qué es HTML?](#1-qué-es-html)
+2. [Estructura básica](#2-estructura-básica)
+3. [Elementos o etiquetas HTML](#3-qué-son-los-elementos-o-etiquetas-html)
+4. [Bloque vs. Línea](#4-comportamiento-bloque-vs-línea)
+5. [Atributos de elementos](#5-atributos-de-elementos-html)
+6. [Elementos estructurales](#6-elementos-estructurales)
+7. [Elementos semánticos](#7-elementos-semánticos)
+8. [Etiquetas de contenido](#8-etiquetas-de-contenido)
+9. [Creación de formularios](#9-etiquetas-para-creación-de-formularios)
+10. [Atributos de Input](#10-atributos-de-la-etiqueta-input)
+11. [Tablas](#11-tablas-de-contenido)
+12. [Multimedia y Metaetiquetas](#12-contenido-incrustado-y-metaetiquetas)
+13. [Accesibilidad Web (A11y)](#13-accesibilidad-web-a11y)
+
 ---
 
 ## 1. ¿Qué es HTML?
