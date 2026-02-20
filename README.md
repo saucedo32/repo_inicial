@@ -1,4 +1,4 @@
-# 📑 HTML5 Cheatsheet: Guía de Referencia Rápida
+# 🌐 HTML5 Cheatsheet: Guía de Referencia Rápida
 
 Esta guía sirve como un resumen práctico de los fundamentos de HTML5, ideal para consultas rápidas y para entender la jerarquía y estructura de la web.
 
@@ -16,8 +16,9 @@ Esta guía sirve como un resumen práctico de los fundamentos de HTML5, ideal pa
 9. [Creación de formularios](#9-etiquetas-para-creación-de-formularios)
 10. [Atributos de Input](#10-atributos-de-la-etiqueta-input)
 11. [Tablas](#11-tablas-de-contenido)
-12. [Multimedia y Metaetiquetas](#12-contenido-incrustado-y-metaetiquetas)
-13. [Accesibilidad Web (A11y)](#13-accesibilidad-web-a11y)
+12. [Multimedia](#12-contenido-incrustado-y-metaetiquetas)
+13. [Metaetiquetas](#13-metaetiquetas)
+14. [Accesibilidad Web (A11y)](#14-accesibilidad-web-a11y)
 
 ---
 
@@ -34,7 +35,6 @@ Todo documento HTML5 debe contar con la siguiente anatomía mínima:
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primera Página</title>
 </head>
 <body>
@@ -166,25 +166,26 @@ El comportamiento del `<input>` cambia según su atributo `type`:
 
 ---
 
-## 12. Contenido incrustado y Metaetiquetas
+## 12. Contenido incrustado
 
 ### Contenido incrustado
 * **`<iframe>`**: Inserta otro documento o sitio web (ej. Google Maps).
 * **`<video>` / `<audio>`**: Reproduce multimedia nativa. Es recomendable usar el atributo `controls`.
 
+---
+
+## 13. Metaetiquetas
+
 ### Metaetiquetas (Dentro de `<head>`)
 * **`<meta charset="UTF-8">`**: Codificación necesaria para tildes y letras "ñ".
-* **`<meta name="viewport" content="...">`**: Clave para que el diseño sea responsive (se adapte a móviles).
 * **`<meta name="description" content="...">`**: Resumen del sitio que aparece en Google.
 
 ---
 
-## 13. Accesibilidad Web (A11y)
-* **Jerarquía:** Usar un solo `<h1>` por página y seguir un orden lógico (`h2`, luego `h3`).
+## 14. Accesibilidad Web (A11y)
 * **Imágenes:** Usar siempre el atributo `alt` descriptivo para lectores de pantalla.
-* **Vinculación:** Usar el atributo `for` en el `<label>` coincidiendo con el `id` del `<input>`.
 * **Semántica:** Priorizar siempre el uso de etiquetas semánticas sobre los simples `<div>`.
-
-
+* **Jerarquía:** Usar un solo `<h1>` por página y seguir un orden lógico (`h2`, luego `h3`).
+* **Vinculación:** Usar el atributo `for` en el `<label>` coincidiendo con el `id` del `<input>`.
 
 
