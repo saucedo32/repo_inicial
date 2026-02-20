@@ -14,22 +14,20 @@ CSS (**Cascading Style Sheets**) es el lenguaje que utilizamos para definir el a
 
 ---
 
-## 2. Métodos de Implementación
+## 2. ¿Cómo podemos incluir CSS en nuestro HTML?
 Existen tres formas de incluir CSS en nuestro proyecto, cada una con un nivel de prioridad y orden distinto:
 
 | Método | Descripción | Ejemplo |
 | :--- | :--- | :--- |
 | **Atributo `style` (Inline)** | Se escribe directamente en la etiqueta HTML. | `<h1 style="color: red;">Hola</h1>` |
 | **Etiqueta `<style>` (Interno en HTML)** | Se coloca dentro del `<head>` del HTML. | `<style> h1 { color: red; } </style>` |
-| **Archivo externo (`.css`)** | Se vincula un archivo separado mediante `<link>`. | `<link rel="stylesheet" href="estilos.css">` |
+| **Archivo externo (`.css`)** | Se vincula dentro del `<head>` un archivo separado mediante la etiqueta `<link>`. | `<link rel="stylesheet" href="estilos.css">` |
 
 ---
 
 
-
-
 ## 3. Sintaxis y Selectores
-La estructura básica de CSS consiste en un Selector, una Propiedad y un Valor.
+La estructura básica de CSS consiste en un **SELECTOR**, una **PROPIEDAD** y un **VALOR**.
 
 ### Anatomía de una regla CSS
 > **Selector** {  
@@ -44,20 +42,35 @@ La estructura básica de CSS consiste en un Selector, una Propiedad y un Valor.
 ### Selectores Básicos
 Los selectores permiten apuntar a los elementos con diferentes niveles de precisión:
 
-| Selector | Descripción | Ejemplo |
-| :--- | :--- | :--- |
-| **Universal (`*`)** | Selecciona **todos** los elementos del documento. | `* { margin: 0; }` |
-| **De Elemento** | Selecciona todas las etiquetas del tipo indicado. | `p { color: gray; }` |
-| **De Clase (`.`)** | Selecciona elementos con un atributo `class` específico. | `.mi-boton { cursor: pointer; }` |
-| **De ID (`#`)** | Selecciona el elemento **único** que tenga ese `id`. | `#main-header { padding: 20px; }` |
+---
 
+### Tabla de Selectores CSS
+Los selectores permiten aplicar estilos con precisión, desde afectar a todo el documento hasta a un solo elemento basado en su relación con otros.
+
+| Selector | Nombre / Descripción | Ejemplo de uso |
+| :--- | :--- | :--- |
+| **`*`** | **Universal:** Selecciona absolutamente todos los elementos. | `* { box-sizing: border-box; }` |
+| **`tag`** | **De Elemento:** Selecciona todas las etiquetas de ese tipo. | `p { line-height: 1.6; }` |
+| **`.clase`** | **De Clase:** Selecciona elementos con ese atributo `class`. | `.destacado { color: gold; }` |
+| **`#id`** | **De ID:** Selecciona el elemento único con ese `id`. | `#main-nav { background: #333; }` |
+| **`s1 s2`** | **Descendiente:** Selecciona `s2` si está dentro de `s1`. | `div p { font-style: italic; }` |
+| **`.c1.c2`** | **Multiclase:** Elementos que tienen AMBAS clases. | `.btn.sucess { color: green; }` |
+| **`s1.c1`** | **Elemento con Clase:** El elemento `s1` que tenga la clase `c1`. | `img.avatar { border-radius: 50%; }` |
+| **`s1, s2`** | **Agrupación:** Aplica el mismo estilo a varios selectores. | `h1, h2, h3 { margin-bottom: 10px; }` |
+| **`s1 > s2`** | **Hijo Directo:** `s2` debe ser hijo inmediato de `s1`. | `ul > li { list-style: none; }` |
+| **`s1 + s2`** | **Hermano Adyacente:** El elemento `s2` que sigue justo a `s1`. | `h1 + p { margin-top: 0; }` |
+
+### Notas de Aplicación
+1. **Combinadores:** Los espacios (` `) y los símbolos (`>`, `+`) cambian el alcance. Un espacio busca en **toda la profundidad**, mientras que `>` solo busca en el **primer nivel**.
+2. **Eficiencia:** Evita encadenar demasiados selectores (ej. `body div section ul li a`). Cuanto más corto sea el selector, más rápido lo procesará el navegador.
+3. **Prioridad:** Recuerda que un `id` siempre le ganará a una `clase`, y una `clase` le ganará a un `elemento`.
 
 ---
 
-## 4. Unidades y Colores
+## 4. Unidades de medida y Colores
 El manejo de medidas y colores es fundamental para lograr diseños consistentes y accesibles.
 
-### Unidades de Medida
+### Unidades de medida
 | Unidad | Tipo | Descripción | Ejemplo |
 | :--- | :--- | :--- | :--- |
 | **`px`** | Absoluta | Píxeles fijos en pantalla. | `font-size: 16px;` |
