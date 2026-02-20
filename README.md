@@ -2,7 +2,8 @@
 
 Esta guía sirve como un resumen práctico de los fundamentos de HTML5, ideal para consultas rápidas y para entender la jerarquía y estructura de la web.
 
-> 📚 **Documentación de interés:** Para profundizar en cada etiqueta y ver ejemplos interactivos, te recomendamos visitar [W3Schools - HTML Tutorial](https://www.w3schools.com/html/).
+> 📚 **Documentación de interés:** Para profundizar en cada etiqueta y ver ejemplos interactivos, te recomendamos visitar [W3Schools - Tutorial HTML](https://www.w3schools.com/html/) y [MDN Web Docs - HTML](https://developer.mozilla.org/es/docs/Web/HTML).
+
 
 ## 🔍 Índice de Contenidos
 1. [¿Qué es HTML?](#1-qué-es-html)
