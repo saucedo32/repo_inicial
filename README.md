@@ -51,7 +51,7 @@ Un elemento es la unidad básica de HTML. La mayoría se componen de una etiquet
 
 **Anatomía de un elemento:**
 `<etiqueta atributo="valor"> Contenido </etiqueta>`
-
+$$\textbf{<etiqueta atributo="valor"> Contenido </etiqueta>}$$
 
 
 | Elemento | Descripción |
