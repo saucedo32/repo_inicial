@@ -26,8 +26,8 @@ Todo documento HTML5 debe contar con la siguiente anatomía mínima:
     <h1>¡Hola Mundo!</h1>
     <p>Este es el inicio de mi documento.</p>
 </body>
-</html>```
-
+</html>
+```
 
 
 Nueva línea
