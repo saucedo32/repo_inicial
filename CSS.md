@@ -67,10 +67,25 @@ El manejo de medidas y colores es fundamental para lograr diseños consistentes 
 | **`vh` / `vw`** | Relativa | 1% del alto (`vh`) o ancho (`vw`) de la ventana. | `height: 100vh;` |
 
 ### Formatos de Color
+Los colores en CSS pueden definirse de múltiples formas dependiendo de la precisión o la transparencia que necesites para el diseño.
+
 | Nombre | Hexadecimal | RGB / RGBA | HSL |
 | :--- | :--- | :--- | :--- |
-| `red` | `#FF0000` | `rgb(255, 0, 0)` | `hsl(0, 100%, 50%)` |
-| `blue` | `#0000FF` | `rgba(0, 0, 255, 0.5)` | `hsl(240, 100%, 50%)` |
+| **`red`** 🔴 | `#FF0000` | `rgb(255, 0, 0)` | `hsl(0, 100%, 50%)` |
+| **`blue`** 🔵 | `#0000FF` | `rgba(0, 0, 255, 0.5)` | `hsl(240, 100%, 50%)` |
+| **`green`** 🟢 | `#008000` | `rgb(0, 128, 0)` | `hsl(120, 100%, 25%)` |
+| **`yellow`** 🟡 | `#FFFF00` | `rgb(255, 255, 0)` | `hsl(60, 100%, 50%)` |
+| **`orange`** 🟠 | `#FFA500` | `rgb(255, 165, 0)` | `hsl(39, 100%, 50%)` |
+| **`purple`** 🟣 | `#800080` | `rgb(128, 0, 128)` | `hsl(300, 100%, 25%)` |
+| **`lightblue`** 🔵 | `#ADD8E6` | `rgb(173, 216, 230)` | `hsl(195, 53%, 79%)` |
+| **`black`** ⚫ | `#000000` | `rgb(0, 0, 0)` | `hsl(0, 0%, 0%)` |
+| **`white`** ⚪ | `#FFFFFF` | `rgb(255, 255, 255)` | `hsl(0, 0%, 100%)` |
+
+
+* **Nombres Clave (`Keywords`):** Son palabras predefinidas (como `red` o `lightblue`). Son geniales para prototipos rápidos, pero limitadas a 140 nombres estándar.
+* **Hexadecimal (`#HEX`):** El estándar más usado en la web. Representa la mezcla de Rojo, Verde y Azul en código base 16. Es ideal para copiar colores exactos de herramientas como Figma o Photoshop.
+* **RGB / RGBA:** Define la intensidad de Rojo, Verde y Azul en valores de **0 a 255**. La versión **RGBA** añade un canal "Alpha" (de 0 a 1) para manejar transparencias.
+* **HSL:** Siglas de **Hue** (Tono), **Saturation** (Saturación) y **Lightness** (Luminosidad). Es el formato más intuitivo para humanos, ya que permite aclarar u oscurecer un color simplemente cambiando el porcentaje de brillo.
 
 ---
 
