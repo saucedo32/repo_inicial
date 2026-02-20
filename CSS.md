@@ -26,7 +26,8 @@ Existen tres formas de incluir CSS en nuestro proyecto, cada una con un nivel de
 ---
 
 
-## 3. Sintaxis y Selectores
+## 3. Sintaxis básica CSS
+
 La estructura básica de CSS consiste en un **SELECTOR**, una **PROPIEDAD** y un **VALOR**.
 
 ### Anatomía de una regla CSS
@@ -39,12 +40,9 @@ La estructura básica de CSS consiste en un **SELECTOR**, una **PROPIEDAD** y un
 * **Valor:** El ajuste específico que asignamos a esa propiedad.
 
 
-### Selectores Básicos
-Los selectores permiten apuntar a los elementos con diferentes niveles de precisión:
-
 ---
 
-### Tabla de Selectores CSS
+## 4. Tabla de Selectores CSS
 Los selectores permiten aplicar estilos con precisión, desde afectar a todo el documento hasta a un solo elemento basado en su relación con otros.
 
 | Selector | Nombre / Descripción | Ejemplo de uso |
@@ -67,7 +65,22 @@ Los selectores permiten aplicar estilos con precisión, desde afectar a todo el 
 
 ---
 
-## 4. Unidades de medida y Colores
+
+## 5. Especificidad
+Es el sistema que usa el navegador para decidir qué regla se aplica cuando hay conflictos (varias reglas apuntando al mismo elemento).
+
+> **Puntuación de Especificidad:**
+> * **Estilo en línea:** 1000 puntos.
+> * **ID (`#`):** 100 puntos.
+> * **Clases, atributos y pseudoclases:** 10 puntos.
+> * **Elementos y pseudoelementos:** 1 punto.
+> * **Selector universal (`*`):** 0 puntos.
+
+**Nota:** Si hay un empate en puntos, prevalece la regla que esté escrita **más abajo** en el archivo CSS.
+
+---
+
+## 6. Unidades de medida y Colores
 El manejo de medidas y colores es fundamental para lograr diseños consistentes y accesibles.
 
 ### Unidades de medida
@@ -102,21 +115,8 @@ Los colores en CSS pueden definirse de múltiples formas dependiendo de la preci
 
 ---
 
-## 5. Especificidad
-Es el sistema que usa el navegador para decidir qué regla se aplica cuando hay conflictos (varias reglas apuntando al mismo elemento).
 
-> **Puntuación de Especificidad:**
-> * **Estilo en línea:** 1000 puntos.
-> * **ID (`#`):** 100 puntos.
-> * **Clases, atributos y pseudoclases:** 10 puntos.
-> * **Elementos y pseudoelementos:** 1 punto.
-> * **Selector universal (`*`):** 0 puntos.
-
-**Nota:** Si hay un empate en puntos, prevalece la regla que esté escrita **más abajo** en el archivo CSS.
-
----
-
-## 6. Herencia
+## 7. Herencia
 No todas las propiedades se comportan igual al aplicarse a un elemento padre:
 
 * **Propiedades heredadas:** Se transmiten automáticamente a los hijos (ej: `color`, `font-family`, `line-height`).
@@ -124,7 +124,7 @@ No todas las propiedades se comportan igual al aplicarse a un elemento padre:
 
 ---
 
-## 7. Propiedades Comunes
+## 8. Propiedades Comunes
 
 ### Color y Fondo
 | Propiedad | Descripción | Valor por defecto | Valores frecuentes |
@@ -132,6 +132,7 @@ No todas las propiedades se comportan igual al aplicarse a un elemento padre:
 | `color` | Color del texto. | `initial` | Hex, RGB, nombre. |
 | `background-color` | Color de fondo. | `transparent` | Hex, RGB, nombre. |
 | `background-image` | Imagen de fondo. | `none` | `url('ruta/img.jpg')` |
+
 
 ### Tipografía y Texto
 | Propiedad | Descripción | Valor por defecto | Valores frecuentes |
@@ -142,6 +143,32 @@ No todas las propiedades se comportan igual al aplicarse a un elemento padre:
 | `font-size` | Tamaño de la letra. | `medium` | `16px`, `1.2rem`, `110%` |
 | `font-weight` | Grosor de la letra. | `normal` | `bold`, `400`, `700` |
 
+### Tamaño
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| `width` / `height` | Ancho y alto fijo. | `auto` | `px`, `%`, `vh`, `vw` |
+| `min-width` | Tamaño mínimo garantizado. | `0` | `300px` |
+| `max-width` | Límite máximo de crecimiento. | `none` | `100%`, `1200px` |
+
+### Visualización y Visibilidad
+Determinan cómo se comporta el elemento en el flujo del documento.
+
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| **`display`** | Define el tipo de caja de renderizado. | `inline` / `block` | `flex`, `grid`, `inline-block`, `none` |
+| **`visibility`** | Oculta el elemento pero mantiene su espacio. | `visible` | `hidden` |
+| **`opacity`** | Nivel de transparencia del elemento. | `1` | `0` (invisible) hasta `1` (opaco) |
+| **`cursor`** | Cambia el aspecto del puntero del mouse. | `auto` | `pointer`, `not-allowed`, `grab` |
+
+### Bordes y Contornos
+Controlan el marco y la forma de los elementos.
+
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| **`border`** | Propiedad corta (ancho, estilo, color). | `none` | `1px solid black`, `2px dashed red` |
+| **`border-radius`** | Redondea las esquinas de la caja. | `0` | `8px`, `50%` (para círculos) |
+| **`outline`** | Línea exterior (no ocupa espacio en el box model). | `none` | `2px solid blue` |
+
 ### Control de Desbordamiento (`overflow`)
 Controla qué sucede cuando el contenido supera el tamaño del contenedor:
 * **`visible`**: El contenido sobresale (por defecto).
@@ -151,10 +178,42 @@ Controla qué sucede cuando el contenido supera el tamaño del contenedor:
 
 ---
 
-## 8. El Modelo de Caja (Box Model)
 
-Todos los elementos HTML se visualizan como cajas rectangulares compuestas por capas:
+## 9. El Modelo de Caja (Box Model)
+En CSS, cada elemento se considera una caja rectangular. Comprender cómo interactúan sus partes es fundamental para controlar el diseño y el espaciado de una página web.
 
+### Representación Visual
+A continuación se muestra cómo se estructuran las capas desde el centro hacia afuera:
+
+```text
+ _______________________________________
+|                MARGIN                 |  <- Espacio externo (separa de otros)
+|    _______________________________    |
+|   |            BORDER             |   |  <- Línea de contorno (grosor/estilo)
+|   |    _______________________    |   |
+|   |   |       PADDING         |   |   |  <- Espacio interno (respira el contenido)
+|   |   |    _______________    |   |   |
+|   |   |   |               |   |   |   |
+|   |   |   |    CONTENT    |   |   |   |  <- El contenido real (texto/imagen)
+|   |   |   |_______________|   |   |   |
+|   |   |_______________________|   |   |
+|   |_______________________________|   |
+|_______________________________________|
+```
+
+
+### Desglose de Capas del Box Model
+Cada propiedad cumple un rol específico en la estructura y el espaciado del elemento:
+
+| Capa | Descripción | Propiedades CSS |
+| :--- | :--- | :--- |
+| **Content** | El área donde se renderiza el texto o la imagen. | `width`, `height` |
+| **Padding** | Espacio transparente entre el contenido y el borde. | `padding`, `padding-top`, `padding-left`, etc. |
+| **Border** | Capa que rodea el padding. Tiene grosor, color y estilo. | `border`, `border-width`, `border-style`, `border-radius` |
+| **Margin** | Espacio exterior que separa el elemento de sus vecinos. | `margin`, `margin-bottom`, `margin-right`, `auto` |
+
+
+### Valores frecuentes en Box Model
 | Capa | Descripción | Valores frecuentes |
 | :--- | :--- | :--- |
 | **Content** | El contenido real (texto o imagen). | Ancho y alto definidos. |
@@ -162,14 +221,44 @@ Todos los elementos HTML se visualizan como cajas rectangulares compuestas por c
 | **Border** | Línea que rodea el padding y contenido. | `1px solid black` |
 | **Margin** | Espacio externo fuera del borde. | `auto`, `20px` |
 
+
+
+### Ejemplo Práctico: ¿Por qué usar `border-box`?
+Para entender el impacto de este "reset", comparemos cómo se comportan dos cajas con las mismas propiedades bajo distintos modelos:
+
+#### El Escenario
+Queremos una caja que mida **300px** de ancho total, con un relleno interno de **20px** y un borde de **5px**.
+
+#### Comparativa de Modelos
+| Modelo | Resultado en Pantalla | Cálculo Técnico |
+| :--- | :--- | :--- |
+| **`content-box`** (Default) | **350px** ⚠️ | 300 (Content) + 40 (Padding L/R) + 10 (Border L/R) |
+| **`border-box`** (Reset) | **300px** ✅ | 250 (Content) + 40 (Padding L/R) + 10 (Border L/R) |
+
+
+### Ejemplo de Código
+Si aplicas el reset universal al inicio de tu CSS, garantizas que tus diseños no se "rompan" al añadir padding:
+
+```css
+/* 1. RESET UNIVERSAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* El ancho definido será el ancho FINAL */
+}
+
+/* 2. APLICACIÓN */
+.caja-perfecta {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid #333;
+  /* Gracias al reset, esta caja medirá exactamente 300px en el navegador */
+}
+```
+
+
 ---
 
-## 9. Propiedades de Tamaño
-| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
-| :--- | :--- | :--- | :--- |
-| `width` / `height` | Ancho y alto fijo. | `auto` | `px`, `%`, `vh`, `vw` |
-| `min-width` | Tamaño mínimo garantizado. | `0` | `300px` |
-| `max-width` | Límite máximo de crecimiento. | `none` | `100%`, `1200px` |
 
 ---
 
