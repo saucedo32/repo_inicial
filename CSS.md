@@ -40,9 +40,8 @@ La estructura básica de CSS consiste en un Selector, una Propiedad y un Valor.
 * **Propiedad:** El aspecto que queremos cambiar (color, tamaño, margen).
 * **Valor:** El ajuste específico que asignamos a esa propiedad.
 
----
 
-### Tabla de Selectores Básicos
+### Selectores Básicos
 Los selectores permiten apuntar a los elementos con diferentes niveles de precisión:
 
 | Selector | Descripción | Ejemplo |
@@ -52,45 +51,116 @@ Los selectores permiten apuntar a los elementos con diferentes niveles de precis
 | **De Clase (`.`)** | Selecciona elementos con un atributo `class` específico. | `.mi-boton { cursor: pointer; }` |
 | **De ID (`#`)** | Selecciona el elemento **único** que tenga ese `id`. | `#main-header { padding: 20px; }` |
 
----
-
-
-## 4. Titulo
-
 
 ---
 
+## 4. Unidades y Colores
+El manejo de medidas y colores es fundamental para lograr diseños consistentes y accesibles.
 
-## 5. Titulo
+### Unidades de Medida
+| Unidad | Tipo | Descripción | Ejemplo |
+| :--- | :--- | :--- | :--- |
+| **`px`** | Absoluta | Píxeles fijos en pantalla. | `font-size: 16px;` |
+| **`%`** | Relativa | Porcentaje respecto al elemento padre. | `width: 50%;` |
+| **`em`** | Relativa | Relativo al tamaño de fuente del elemento. | `margin: 2em;` |
+| **`rem`** | Relativa | Relativo al tamaño de fuente raíz (`<html>`). | `padding: 1.5rem;` |
+| **`vh` / `vw`** | Relativa | 1% del alto (`vh`) o ancho (`vw`) de la ventana. | `height: 100vh;` |
 
+### Formatos de Color
+| Nombre | Hexadecimal | RGB / RGBA | HSL |
+| :--- | :--- | :--- | :--- |
+| `red` | `#FF0000` | `rgb(255, 0, 0)` | `hsl(0, 100%, 50%)` |
+| `blue` | `#0000FF` | `rgba(0, 0, 255, 0.5)` | `hsl(240, 100%, 50%)` |
+
+---
+
+## 5. Especificidad
+Es el sistema que usa el navegador para decidir qué regla se aplica cuando hay conflictos (varias reglas apuntando al mismo elemento).
+
+> **Puntuación de Especificidad:**
+> * **Estilo en línea:** 1000 puntos.
+> * **ID (`#`):** 100 puntos.
+> * **Clases, atributos y pseudoclases:** 10 puntos.
+> * **Elementos y pseudoelementos:** 1 punto.
+> * **Selector universal (`*`):** 0 puntos.
+
+**Nota:** Si hay un empate en puntos, prevalece la regla que esté escrita **más abajo** en el archivo CSS.
+
+---
+
+## 6. Herencia
+No todas las propiedades se comportan igual al aplicarse a un elemento padre:
+
+* **Propiedades heredadas:** Se transmiten automáticamente a los hijos (ej: `color`, `font-family`, `line-height`).
+* **Propiedades NO heredadas:** Deben definirse específicamente para cada elemento (ej: `border`, `margin`, `padding`, `background`).
+
+---
+
+## 7. Propiedades Comunes
+
+### Color y Fondo
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| `color` | Color del texto. | `initial` | Hex, RGB, nombre. |
+| `background-color` | Color de fondo. | `transparent` | Hex, RGB, nombre. |
+| `background-image` | Imagen de fondo. | `none` | `url('ruta/img.jpg')` |
+
+### Tipografía y Texto
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| `text-align` | Alineación horizontal. | `left` | `center`, `right`, `justify` |
+| `text-decoration` | Decoración visual. | `none` | `underline`, `line-through` |
+| `font-family` | Familia tipográfica. | Varía | `Arial`, `sans-serif` |
+| `font-size` | Tamaño de la letra. | `medium` | `16px`, `1.2rem`, `110%` |
+| `font-weight` | Grosor de la letra. | `normal` | `bold`, `400`, `700` |
+
+### Control de Desbordamiento (`overflow`)
+Controla qué sucede cuando el contenido supera el tamaño del contenedor:
+* **`visible`**: El contenido sobresale (por defecto).
+* **`hidden`**: Se recorta lo que sobra.
+* **`scroll`**: Añade barras de desplazamiento permanentemente.
+* **`auto`**: Añade barras solo si el contenido se desborda.
+
+---
+
+## 8. El Modelo de Caja (Box Model)
+
+Todos los elementos HTML se visualizan como cajas rectangulares compuestas por capas:
+
+| Capa | Descripción | Valores frecuentes |
+| :--- | :--- | :--- |
+| **Content** | El contenido real (texto o imagen). | Ancho y alto definidos. |
+| **Padding** | Espacio interno entre contenido y borde. | `10px`, `1em 2em` |
+| **Border** | Línea que rodea el padding y contenido. | `1px solid black` |
+| **Margin** | Espacio externo fuera del borde. | `auto`, `20px` |
+
+---
+
+## 9. Propiedades de Tamaño
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| `width` / `height` | Ancho y alto fijo. | `auto` | `px`, `%`, `vh`, `vw` |
+| `min-width` | Tamaño mínimo garantizado. | `0` | `300px` |
+| `max-width` | Límite máximo de crecimiento. | `none` | `100%`, `1200px` |
 
 ---
 
 
-## 6. Titulo
-
-
----
-
-
-## 7. Titulo
 
 
 
 ---
-
-## 8. Titulo
-
-
+---
+---
+---
+---
+---
+---
+---
 ---
 
+## 4. Unidades y Colores
 
-2. 
-
-
-3. 
-
-4. Unidades y Colores
 Unidades de Medida
 px: Píxeles (unidades fijas en pantalla). Absoluta.
 %: Porcentaje relativo al elemento padre. Relativa.
@@ -103,7 +173,10 @@ red,#FF0000,"rgb(255, 0, 0)","hsl(0, 100%, 50%)"
 blue,#0000FF,"rgba(0, 0, 255, 0.5)","hsl(240, 100%, 50%)"
 
 
-5. Especificidad y Herencia
+---
+
+
+## 5. Especificidad 
 Especificidad
 Es el sistema que usa el navegador para decidir qué regla se aplica cuando hay conflictos. Se calcula por "puntos":
 
@@ -114,10 +187,18 @@ Elementos y pseudoelementos: 1 punto.
 
 Nota: El selector universal (*) tiene 0 puntos. Si hay empate, gana la regla que esté escrita más abajo en el archivo.
 
+
+---
+
+
+## 6. Herencia
 Herencia
 Algunas propiedades (como color o font-family) se transmiten de padres a hijos automáticamente. Otras (como border o margin) no se heredan.
 
-6. Propiedades Comunes
+---
+
+
+## 7. Propiedades Comunes
 Color y Fondo
 
 Propiedad,Descripción,Valor por defecto,Valores frecuentes
@@ -146,7 +227,10 @@ scroll: Añade barras de desplazamiento siempre.
 auto: Añade barras solo si es necesario.
 
 
-7. El Modelo de Caja (Box Model)
+
+---
+
+## 8. El Modelo de Caja (Box Model)
 Todos los elementos HTML son cajas rectangulares.
 Propiedad,Descripción,Valores frecuentes
 Content,"El contenido real (texto, imagen).",Ancho y alto definido.
@@ -155,11 +239,58 @@ Border,Línea que rodea el padding y contenido.,1px solid black
 Margin,Espacio externo fuera del borde.,"auto, 20px"
 
 
-8. Propiedades de Tamaño
+---
+
+## 9. Propiedades de Tamaño
 Propiedad,Descripción,Valor por defecto,Valores frecuentes
 width / height,Ancho y alto fijo.,auto,"px, %, vh, vw"
 min-width,El elemento no será más pequeño que esto.,0,300px
 max-width,El elemento no crecerá más de esto.,none,"100%, 1200px"
+
+
+---
+
+## 9. 
+
+
+---
+
+## 9. 
+
+
+---
+
+## 9. 
+
+
+---
+
+## 9. 
+
+
+---
+
+
+
+2. 
+
+
+3. 
+
+4. 
+
+
+5. 
+
+
+
+6. 
+
+
+7. 
+
+
+8. 
 
 
 
