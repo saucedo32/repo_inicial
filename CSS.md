@@ -1,6 +1,7 @@
 # 🌐 Guía de Referencia Rápida: CSS Inicial
 
-Esta guía está diseñada para proporcionar una base amplia y rápida sobre las hojas de estilo en cascada. Para una consulta profunda y técnica, siempre es recomendable visitar la documentación oficial.
+Esta guía está diseñada para proporcionar una base amplia y rápida sobre las hojas de estilo en cascada. 
+Para una consulta profunda y técnica, siempre es recomendable visitar la documentación oficial.
 
 > 📚 **Documentación recomendada:** Para profundizar en cada propiedad y ver ejemplos interactivos, te recomendamos visitar:
 * **[MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS)**: La referencia técnica más completa y actualizada mantenida por la comunidad de Mozilla.
