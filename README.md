@@ -16,7 +16,7 @@ Esta guía sirve como un resumen práctico de los fundamentos de HTML5, ideal pa
 9. [Creación de formularios](#9-etiquetas-para-creación-de-formularios)
 10. [Atributos de Input](#10-atributos-de-la-etiqueta-input)
 11. [Tablas](#11-tablas-de-contenido)
-12. [Multimedia](#12-contenido-incrustado-y-metaetiquetas)
+12. [Multimedia o contenido incrustrado](#12-contenido-incrustado)
 13. [Metaetiquetas](#13-metaetiquetas)
 14. [Accesibilidad Web (A11y)](#14-accesibilidad-web-a11y)
 
@@ -166,7 +166,7 @@ El comportamiento del `<input>` cambia según su atributo `type`:
 
 ---
 
-## 12. Contenido incrustado
+## 12. Multimedia o contenido incrustado
 
 ### Contenido incrustado
 * **`<iframe>`**: Inserta otro documento o sitio web (ej. Google Maps).
