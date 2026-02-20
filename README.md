@@ -29,8 +29,22 @@ Todo documento HTML5 debe contar con la siguiente anatomía mínima:
 </html>
 ```
 
+## 3. ¿Qué son los elementos o etiquetas HTML?
+Un elemento es la unidad básica de HTML. La mayoría se componen de una etiqueta de apertura, contenido y una etiqueta de cierre.
 
-Nueva línea
+**Anatomía de un elemento:**
+`<etiqueta atributo="valor"> Contenido </etiqueta>`
+
+| Elemento | Descripción |
+| :--- | :--- |
+| `<h1>` a `<h6>` | Encabezados de mayor a menor importancia. |
+| `<p>` | Define un párrafo de texto. |
+| `<a>` | Define un hipervínculo (requiere atributo `href`). |
+| `<ul>` / `<ol>` | Listas desordenadas (puntos) u ordenadas (números). |
+| `<li>` | Ítem individual dentro de una lista. |
+| `<img>` | Inserta una imagen (Etiqueta vacía: no requiere cierre). |
+
+
 
 
 
