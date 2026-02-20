@@ -7,7 +7,7 @@ Esta guía sirve como un resumen práctico de los fundamentos de HTML5, ideal pa
 ---
 
 ## 1. ¿Qué es HTML?
-**HTML** (*HyperText Markup Language*) es el lenguaje de marcado estándar para la creación de páginas web. No es un lenguaje de programación; su función es definir la **estructura** y el **contenido** (texto, imágenes, enlaces) de un documento mediante etiquetas.
+**HTML** (*HyperText Markup Language*) es el lenguaje de marcado estándar para la creación de páginas web. No es un lenguaje de programación, su función es definir la **estructura** y el **contenido** (texto, imágenes, enlaces) de un documento mediante etiquetas.
 
 ---
 
@@ -27,6 +27,10 @@ Todo documento HTML5 debe contar con la siguiente anatomía mínima:
     <p>Este es el inicio de mi documento.</p>
 </body>
 </html>
+
+
+
+Nueva línea
 
 
 
