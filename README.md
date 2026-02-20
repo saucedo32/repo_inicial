@@ -1,4 +1,4 @@
-# 🌐 HTML5 Cheatsheet: Guía de Referencia Rápida
+# 🌐 Guía de referencia rápida HTML
 
 Esta guía sirve como un resumen práctico de los fundamentos de HTML5, ideal para consultas rápidas y para entender la jerarquía y estructura de la web.
 
@@ -49,9 +49,8 @@ Todo documento HTML5 debe contar con la siguiente anatomía mínima:
 ## 3. ¿Qué son los elementos o etiquetas HTML?
 Un elemento es la unidad básica de HTML. La mayoría se componen de una etiqueta de apertura, contenido y una etiqueta de cierre.
 
-**Anatomía de un elemento:**
+**Anatomía de un elemento:** <br>
 `<etiqueta atributo="valor"> Contenido </etiqueta>`
-$$\textbf{<etiqueta atributo="valor"> Contenido </etiqueta>}$$
 
 
 | Elemento | Descripción |
@@ -89,7 +88,7 @@ Los atributos proporcionan información adicional o modifican el comportamiento 
 ### Atributos Particulares
 * **`href`**: Destino de un enlace (usado en `<a>`).
 * **`src`**: Ruta del archivo o recurso (usado en `<img>`, `<video>`, `<script>`).
-* **`alt`**: Texto descriptivo para accesibilidad (usado en `<img>`).
+* **`alt`**: Texto descriptivo que aparece si no se encuentra la imagen. Es usado para accesibilidad (usado en `<img>`).
 
 ---
 
@@ -104,7 +103,7 @@ Sirven para organizar el documento sin aportar un significado específico al con
 ---
 
 ## 7. Elementos semánticos
-Le comunican al navegador y a los buscadores **qué función cumple** cada parte del sitio, mejorando drásticamente el SEO y la accesibilidad.
+Le comunican al navegador y a los buscadores **qué función cumple** cada parte del sitio, mejorando el posicionamiento (SEO) y la accesibilidad.
 
 
 
@@ -150,7 +149,7 @@ El comportamiento del `<input>` cambia según su atributo `type`:
 * **`type="email"`**: Valida estructura de correo electrónico.
 * **`type="checkbox"`**: Casilla de selección múltiple.
 * **`type="radio"`**: Opción de selección única entre un grupo.
-* **Extras:** `placeholder` (pista visual), `required` (campo obligatorio), `name` (nombre del dato para el servidor).
+* **Extras:** `placeholder` (pista visual), `required` (campo obligatorio).
 
 ---
 
