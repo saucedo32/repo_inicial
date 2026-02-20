@@ -1,6 +1,6 @@
 # 🌐 Guía de Referencia Rápida: CSS Inicial
 
-Esta guía está diseñada para proporcionar una base amplia y rápida sobre las hojas de estilo en cascada. 
+Esta guía está diseñada para proporcionar una base amplia y rápida sobre las hojas de estilo en cascada. <br>
 Para una consulta profunda y técnica, siempre es recomendable visitar la documentación oficial.
 
 > 📚 **Documentación recomendada:** Para profundizar en cada propiedad y ver ejemplos interactivos, te recomendamos visitar:
@@ -20,7 +20,7 @@ Existen tres formas de incluir CSS en nuestro proyecto, cada una con un nivel de
 | Método | Descripción | Ejemplo |
 | :--- | :--- | :--- |
 | **Atributo `style` (Inline)** | Se escribe directamente en la etiqueta HTML. | `<h1 style="color: red;">Hola</h1>` |
-| **Etiqueta `<style>` (Interno)** | Se coloca dentro del `<head>` del HTML. | `<style> h1 { color: red; } </style>` |
+| **Etiqueta `<style>` (Interno en HTML)** | Se coloca dentro del `<head>` del HTML. | `<style> h1 { color: red; } </style>` |
 | **Archivo externo (`.css`)** | Se vincula un archivo separado mediante `<link>`. | `<link rel="stylesheet" href="estilos.css">` |
 
 ---
@@ -28,37 +28,58 @@ Existen tres formas de incluir CSS en nuestro proyecto, cada una con un nivel de
 
 
 
-## 2. Titulo
+## 3. Sintaxis y Selectores
+La estructura básica de CSS consiste en un Selector, una Propiedad y un Valor.
+
+### Anatomía de una regla CSS
+> **Selector** {  
+> &nbsp;&nbsp; **propiedad**: **valor**;  
+> }
+
+* **Selector:** Indica el elemento HTML al que se le aplicará el estilo.
+* **Propiedad:** El aspecto que queremos cambiar (color, tamaño, margen).
+* **Valor:** El ajuste específico que asignamos a esa propiedad.
+
+---
+
+### Tabla de Selectores Básicos
+Los selectores permiten apuntar a los elementos con diferentes niveles de precisión:
+
+| Selector | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| **Universal (`*`)** | Selecciona **todos** los elementos del documento. | `* { margin: 0; }` |
+| **De Elemento** | Selecciona todas las etiquetas del tipo indicado. | `p { color: gray; }` |
+| **De Clase (`.`)** | Selecciona elementos con un atributo `class` específico. | `.mi-boton { cursor: pointer; }` |
+| **De ID (`#`)** | Selecciona el elemento **único** que tenga ese `id`. | `#main-header { padding: 20px; }` |
+
+---
+
+
+## 4. Titulo
 
 
 ---
 
 
-## 2. Titulo
+## 5. Titulo
 
 
 ---
 
 
-## 2. Titulo
+## 6. Titulo
 
 
 ---
 
 
-## 2. Titulo
-
-
----
-
-
-## 2. Titulo
+## 7. Titulo
 
 
 
 ---
 
-## 2. Titulo
+## 8. Titulo
 
 
 ---
@@ -67,19 +88,7 @@ Existen tres formas de incluir CSS en nuestro proyecto, cada una con un nivel de
 2. 
 
 
-3. Sintaxis y Selectores
-La estructura básica de CSS consiste en un Selector, una Propiedad y un Valor.
-
-selector {
-  propiedad: valor;
-}
-
-Tabla de Selectores Básicos
-Selector,Descripción,Ejemplo
-Universal,Selecciona todos los elementos del documento.,* { margin: 0; }
-De Elemento,Selecciona todas las etiquetas del tipo indicado.,p { color: grey; }
-De Clase (.),Selecciona elementos con el atributo class.,.mi-boton { cursor: pointer; }
-De ID (#),Selecciona el elemento único con ese id.,#main-header { padding: 20px; }
+3. 
 
 4. Unidades y Colores
 Unidades de Medida
