@@ -284,7 +284,8 @@ Grid permite posicionar elementos en cualquier sitio, ¡incluso encimarlos sin u
   <div class="item">11</div>
 </div>
 
-**CSS:**
+ejemplo grid CSS
+```css
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
@@ -306,6 +307,8 @@ Grid permite posicionar elementos en cualquier sitio, ¡incluso encimarlos sin u
   align-items: center;
   border: 1px solid #2980b9;
 }
+```
+
 
 ---
 
@@ -314,9 +317,9 @@ Grid permite posicionar elementos en cualquier sitio, ¡incluso encimarlos sin u
 Las Media Queries permiten aplicar estilos diferentes según las características del dispositivo (principalmente el ancho de pantalla). Es lo que hace que un sitio sea **Mobile First**.
 
 
-
 ### Sintaxis Básica
 
+ejemplo media query CSS
 ```css
 /* Estilos generales (Mobile por defecto) */
 .layout {
@@ -331,5 +334,53 @@ Las Media Queries permiten aplicar estilos diferentes según las característica
     background-color: lightblue;
   }
 }
+```
+
+
+### Ejemplo: Layout de Grid que cambia en Mobile
+
+ejemplo HTML para media query
+```html
+<div class="responsive-grid">
+  <header>Header</header>
+  <nav>Nav</nav>
+  <main>Contenido</main>
+  <aside>Sidebar</aside>
+  <footer>Footer</footer>
+</div>
+```
+
+
+ejemplo CSS para media query
+```css
+/* Estilos para Mobile (Base) */
+.responsive-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr; /* Una sola columna que ocupa todo el ancho */
+}
+
+/* Estilos para Desktop (Pantallas mayores a 800px) */
+@media (min-width: 800px) {
+  .responsive-grid {
+    grid-template-columns: 200px 1fr 200px; /* Definimos 3 columnas */
+  }
+  
+  header, footer {
+    grid-column: span 3; /* El encabezado y pie ocupan las 3 columnas */
+  }
+}
+
+/* Estilos visuales genéricos */
+.responsive-grid > * {
+  background: #ddd;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #999;
+}
+```
+
+
+
 
 "Pásame la tabla X en un bloque de código (o chunk) de texto plano."
