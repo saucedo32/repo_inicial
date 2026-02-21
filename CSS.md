@@ -68,7 +68,7 @@ Los selectores permiten aplicar estilos con precisión, desde afectar a todo el 
 | Selector | Nombre / Descripción | Ejemplo de uso |
 | :--- | :--- | :--- |
 | **`*`** | **Universal:** Selecciona absolutamente todos los elementos. | `* { box-sizing: border-box; }` |
-| **`tag`** | **De Elemento:** Selecciona todas las etiquetas de ese tipo. | `p { line-height: 1.6; }` |
+| **`elemento`** | **De Elemento:** Selecciona todas las etiquetas de ese tipo. | `p { line-height: 1.6; }` |
 | **`.clase`** | **De Clase:** Selecciona elementos con ese atributo `class`. | `.destacado { color: gold; }` |
 | **`#id`** | **De ID:** Selecciona el elemento único con ese `id`. | `#main-nav { background: #333; }` |
 | **`s1 s2`** | **Descendiente:** Selecciona `s2` si está dentro de `s1`. | `div p { font-style: italic; }` |
