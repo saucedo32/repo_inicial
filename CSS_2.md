@@ -140,7 +140,7 @@ La propiedad `position` determina cómo se ubica un elemento en el documento. Po
 
 El `z-index` define qué elemento se muestra "encima" de otro en el eje Z (profundidad). 
 
-> **Regla de oro:** Para que un `z-index` funcione, el elemento **debe** tener una propiedad `position` distinta a `static` (usualmente `relative` en el padre).
+> **Recordatorio:** Para que un `z-index` funcione, el elemento **debe** tener una propiedad `position` distinta a `static` (usualmente `relative` en el padre).
 
 ```html
 <div class="escenario">
@@ -197,14 +197,17 @@ Flexbox organiza elementos en un solo eje (fila o columna). Se activa con `displ
 
 ### Ejemplo: Estructura de tarjetas con flexbox
 
-**HTML:**
+ejemplo HTML
+```html
 <div class="flex-container">
   <div class="item">1</div>
   <div class="item">2</div>
   <div class="item">3</div>
 </div>
+```
 
-**CSS:**
+ejemplo CSS
+```css
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -222,40 +225,7 @@ Flexbox organiza elementos en un solo eje (fila o columna). Se activa con `displ
   justify-content: center;
   align-items: center;
 }
-
-
---- 
-
-## 4. Flexbox: diseño unidimensional <a name="flexbox"></a>
-
-Flexbox está diseñado para organizar elementos en un solo eje o dimensión (ya sea una fila o una columna).<br>
-Se activa aplicando `display: flex;` al contenedor padre.
-
-
-
-### 4.1 Propiedades del contenedor (padre)
-
-* **`flex-direction`**: Define la dirección del flujo.
-    * `row` (defecto): Horizontal de izquierda a derecha.
-    * `column`: Vertical de arriba hacia abajo.
-    * `row-reverse` / `column-reverse`: Invierte el orden de los elementos.
-* **`flex-wrap`**: Controla qué sucede si los hijos no caben en una línea.
-    * `nowrap` (defecto): Encoge los elementos para que entren forzosamente.
-    * `wrap`: Los elementos saltan a la siguiente línea si no hay espacio.
-* **`justify-content`**: Alineación en el **eje principal** (horizontal si es `row`).
-    * `flex-start` | `center` | `flex-end` | `space-between` | `space-around` | `space-evenly`.
-* **`align-items`**: Alineación en el **eje secundario** (vertical si es `row`).
-    * `stretch` (defecto): Estira los hijos para llenar el contenedor.
-    * `center` | `flex-start` | `flex-end`.
-* **`gap`**: Define el espacio de separación entre los elementos hijos.
-
-
-### 4.2 Propiedades de los hijos (items)
-
-* **`flex-grow`**: Capacidad de un elemento para crecer y ocupar el espacio sobrante (ej. `flex-grow: 1;`).
-* **`flex-shrink`**: Capacidad para encogerse si el contenedor es muy pequeño.
-* **`flex-basis`**: El tamaño inicial de un elemento antes de que se distribuya el espacio libre.
-* **`order`**: Permite cambiar el orden visual de un hijo (ej. `order: -1;` lo mueve al principio).
+```
 
 ---
 
