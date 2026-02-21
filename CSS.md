@@ -273,7 +273,7 @@ Controlan el marco, el estilo y la forma de los "recuadros".
 
 | Propiedad | Descripción | Valor por defecto | Valores frecuentes |
 | :--- | :--- | :--- | :--- |
-| **`border`** | **Shorthand:** Define ancho, estilo y color en una línea. | `none` | `2px solid black` |
+| **`border`** | Define ancho, estilo y color en una línea. | `none` | `2px solid black` |
 | **`border-width`** | Grosor de la línea del borde. | `medium` | `1px`, `4px`, `0.2rem` |
 | **`border-style`** | Tipo de línea (Sólida, punteada, etc.). | `none` | `solid`, `dashed`, `dotted`, `double` |
 | **`border-color`** | Color de la línea del borde. | `currentcolor` | `red`, `#333`, `transparent` |
