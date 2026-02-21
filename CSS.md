@@ -9,6 +9,26 @@ Para una consulta profunda y técnica, siempre es recomendable visitar la docume
 
 ---
 
+## 🔍 Índice de Contenidos
+1. [¿Qué es CSS?](#1-qué-es-css)
+2. [¿Cómo podemos incluir CSS en nuestro HTML?](#2-cómo-podemos-incluir-css-en-nuestro-html)
+3. [Sintaxis básica CSS](#3-sintaxis-básica-css)
+4. [Tabla de Selectores CSS](#4-tabla-de-selectores-css)
+5. [Especificidad](#5-especificidad)
+6. [Herencia](#6-herencia)
+7. [Unidades de medida y Colores](#7-unidades-de-medida-y-colores)
+8. [El Modelo de la Caja (Box Model)](#8-el-modelo-de-la-caja-box-model)
+9. [Propiedades más usadas](#9-propiedades-más-usadas)
+   - [Color y Fondo](#color-y-fondo)
+   - [Tipografía y Texto](#tipografía-y-texto)
+   - [Tamaño](#tamaño)
+   - [Visualización y Visibilidad](#visualización-y-visibilidad)
+   - [Modelo de Caja (Espaciado y Cálculo)](#modelo-de-caja-espaciado-y-cálculo)
+   - [Bordes y Contornos](#bordes-y-contornos)
+   - [Control de Desbordamiento](#control-de-desbordamiento-overflow)
+
+---
+
 ## 1. ¿Qué es CSS?
 CSS (**Cascading Style Sheets**) es el lenguaje que utilizamos para definir el aspecto y la presentación de un documento HTML. Mientras que el HTML es el "esqueleto" (estructura), el CSS es la "piel" (diseño, tamaños, colores, fuentes).
 
@@ -80,7 +100,14 @@ Es el sistema que usa el navegador para decidir qué regla se aplica cuando hay 
 
 ---
 
-## 6. Unidades de medida y Colores
+## 6. Herencia
+No todas las propiedades se comportan igual al aplicarse a un elemento padre:
+
+* **Propiedades heredadas:** Se transmiten automáticamente a los hijos (ej: `color`, `font-family`, `line-height`).
+* **Propiedades NO heredadas:** Deben definirse específicamente para cada elemento (ej: `border`, `margin`, `padding`, `background`).
+
+---
+## 7. Unidades de medida y Colores
 El manejo de medidas y colores es fundamental para lograr diseños consistentes y accesibles.
 
 ### Unidades de medida
@@ -116,70 +143,7 @@ Los colores en CSS pueden definirse de múltiples formas dependiendo de la preci
 ---
 
 
-## 7. Herencia
-No todas las propiedades se comportan igual al aplicarse a un elemento padre:
-
-* **Propiedades heredadas:** Se transmiten automáticamente a los hijos (ej: `color`, `font-family`, `line-height`).
-* **Propiedades NO heredadas:** Deben definirse específicamente para cada elemento (ej: `border`, `margin`, `padding`, `background`).
-
----
-
-## 8. Propiedades más usadas
-
-### Color y Fondo
-| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
-| :--- | :--- | :--- | :--- |
-| `color` | Color del texto. | `initial` | Hex, RGB, nombre. |
-| `background-color` | Color de fondo. | `transparent` | Hex, RGB, nombre. |
-| `background-image` | Imagen de fondo. | `none` | `url('ruta/img.jpg')` |
-
-
-### Tipografía y Texto
-| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
-| :--- | :--- | :--- | :--- |
-| `text-align` | Alineación horizontal. | `left` | `center`, `right`, `justify` |
-| `text-decoration` | Decoración visual. | `none` | `underline`, `line-through` |
-| `font-family` | Familia tipográfica. | Varía | `Arial`, `sans-serif` |
-| `font-size` | Tamaño de la letra. | `medium` | `16px`, `1.2rem`, `110%` |
-| `font-weight` | Grosor de la letra. | `normal` | `bold`, `400`, `700` |
-
-### Tamaño
-| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
-| :--- | :--- | :--- | :--- |
-| `width` / `height` | Ancho y alto fijo. | `auto` | `px`, `%`, `vh`, `vw` |
-| `min-width` | Tamaño mínimo garantizado. | `0` | `300px` |
-| `max-width` | Límite máximo de crecimiento. | `none` | `100%`, `1200px` |
-
-### Visualización y Visibilidad
-Determinan cómo se comporta el elemento en el flujo del documento.
-
-| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
-| :--- | :--- | :--- | :--- |
-| **`display`** | Define el tipo de caja de renderizado. | `inline` / `block` | `flex`, `grid`, `inline-block`, `none` |
-| **`visibility`** | Oculta el elemento pero mantiene su espacio. | `visible` | `hidden` |
-| **`opacity`** | Nivel de transparencia del elemento. | `1` | `0` (invisible) hasta `1` (opaco) |
-| **`cursor`** | Cambia el aspecto del puntero del mouse. | `auto` | `pointer`, `not-allowed`, `grab` |
-
-### Bordes y Contornos
-Controlan el marco y la forma de los elementos.
-
-| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
-| :--- | :--- | :--- | :--- |
-| **`border`** | Propiedad corta (ancho, estilo, color). | `none` | `1px solid black`, `2px dashed red` |
-| **`border-radius`** | Redondea las esquinas de la caja. | `0` | `8px`, `50%` (para círculos) |
-| **`outline`** | Línea exterior (no ocupa espacio en el box model). | `none` | `2px solid blue` |
-
-### Control de Desbordamiento (`overflow`)
-Controla qué sucede cuando el contenido supera el tamaño del contenedor:
-* **`visible`**: El contenido sobresale (por defecto).
-* **`hidden`**: Se recorta lo que sobra.
-* **`scroll`**: Añade barras de desplazamiento permanentemente.
-* **`auto`**: Añade barras solo si el contenido se desborda.
-
----
-
-
-## 9. El Modelo de Caja (Box Model)
+## 8. El Modelo de la Caja (Box Model)
 En CSS, cada elemento se considera una caja rectangular. Comprender cómo interactúan sus partes es fundamental para controlar el diseño y el espaciado de una página web.
 
 ### Representación Visual
@@ -255,6 +219,77 @@ Si aplicas el reset universal al inicio de tu CSS, garantizas que tus diseños n
   /* Gracias al reset, esta caja medirá exactamente 300px en el navegador */
 }
 ```
+
+---
+
+## 9. Propiedades más usadas
+
+### Color y Fondo
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| `color` | Color del texto. | `initial` | Hex, RGB, nombre. |
+| `background-color` | Color de fondo. | `transparent` | Hex, RGB, nombre. |
+| `background-image` | Imagen de fondo. | `none` | `url('ruta/img.jpg')` |
+
+
+### Tipografía y Texto
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| `text-align` | Alineación horizontal. | `left` | `center`, `right`, `justify` |
+| `text-decoration` | Decoración visual. | `none` | `underline`, `line-through` |
+| `font-family` | Familia tipográfica. | Varía | `Arial`, `sans-serif` |
+| `font-size` | Tamaño de la letra. | `medium` | `16px`, `1.2rem`, `110%` |
+| `font-weight` | Grosor de la letra. | `normal` | `bold`, `400`, `700` |
+
+### Tamaño
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| `width` / `height` | Ancho y alto fijo. | `auto` | `px`, `%`, `vh`, `vw` |
+| `min-width` | Tamaño mínimo garantizado. | `0` | `300px` |
+| `max-width` | Límite máximo de crecimiento. | `none` | `100%`, `1200px` |
+
+### Visualización y Visibilidad
+Determinan cómo se comporta el elemento en el flujo del documento.
+
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| **`display`** | Define el tipo de caja de renderizado. | `inline` / `block` | `flex`, `grid`, `inline-block`, `none` |
+| **`visibility`** | Oculta el elemento pero mantiene su espacio. | `visible` | `hidden` |
+| **`opacity`** | Nivel de transparencia del elemento. | `1` | `0` (invisible) hasta `1` (opaco) |
+| **`cursor`** | Cambia el aspecto del puntero del mouse. | `auto` | `pointer`, `not-allowed`, `grab` |
+
+### Modelo de Caja (Espaciado y Cálculo)
+Propiedades principales que definen el tamaño de la caja.
+
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| **`padding`** | Espacio interno entre el contenido y el borde. | `0` | `10px`, `1rem 2rem`, `5%` |
+| **`margin`** | Espacio externo que separa al elemento de otros. | `0` | `20px`, `auto` (para centrar) |
+| **`box-sizing`** | Define si el ancho total incluye el padding/borde. | `content-box` | `border-box` (Recomendado) |
+
+
+### Bordes y Contornos
+Controlan el marco, el estilo y la forma de los "recuadros".
+
+| Propiedad | Descripción | Valor por defecto | Valores frecuentes |
+| :--- | :--- | :--- | :--- |
+| **`border`** | **Shorthand:** Define ancho, estilo y color en una línea. | `none` | `2px solid black` |
+| **`border-width`** | Grosor de la línea del borde. | `medium` | `1px`, `4px`, `0.2rem` |
+| **`border-style`** | Tipo de línea (Sólida, punteada, etc.). | `none` | `solid`, `dashed`, `dotted`, `double` |
+| **`border-color`** | Color de la línea del borde. | `currentcolor` | `red`, `#333`, `transparent` |
+| **`border-radius`** | Redondea las esquinas del recuadro. | `0` | `8px`, `50%` (círculos), `20px` |
+| **`outline`** | Línea externa que **no** ocupa espacio en el diseño. | `none` | `3px solid blue` |
+
+### Control de Desbordamiento (`overflow`)
+Controla qué sucede cuando el contenido supera el tamaño del contenedor:
+* **`visible`**: El contenido sobresale (por defecto).
+* **`hidden`**: Se recorta lo que sobra.
+* **`scroll`**: Añade barras de desplazamiento permanentemente.
+* **`auto`**: Añade barras solo si el contenido se desborda.
+
+
+
+
 
 
 
