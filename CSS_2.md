@@ -18,7 +18,7 @@ Para una consulta técnica profunda, siempre es recomendable visitar la document
 
 ---
 
-## 1. Conceptos Base: Display y Modelo de Caja <a name="1-conceptos-base"></a>
+## 1. Conceptos Base: display y Modelo de Caja <a name="1-conceptos-base"></a>
 
 Lo que se desarrollará requiere conocimiento previo del modelo de la caja.<br>
 Recordemos que tenemos dos tipos de elementos:
@@ -197,7 +197,7 @@ Flexbox organiza elementos en un solo eje (fila o columna). Se activa con `displ
 
 ### Ejemplo: Estructura de tarjetas con flexbox
 
-ejemplo HTML
+ejemplo flexbox HTML
 ```html
 <div class="flex-container">
   <div class="item">1</div>
@@ -206,7 +206,7 @@ ejemplo HTML
 </div>
 ```
 
-ejemplo CSS
+ejemplo flexbox CSS
 ```css
 .flex-container {
   display: flex;
@@ -229,115 +229,107 @@ ejemplo CSS
 
 ---
 
-## 5. CSS Grid: Diseño Bidimensional <a name="grid"></a>
+---
 
-Mientras Flexbox piensa en una dirección, **Grid Layout** permite manejar filas y columnas simultáneamente. Es la herramienta definitiva para layouts de páginas completas.
+## 5. CSS Grid: Diseño Bidimensional <a name="5-css-grid"></a>
 
-
-
-### 5.1 Definición de la Cuadrícula
-```css
-.contenedor-grid {
-  display: grid;
-  /* Crea 3 columnas: una de 200px y dos que se reparten el resto (fr) */
-  grid-template-columns: 200px 1fr 1fr;
-  /* Crea filas automáticas según el contenido */
-  grid-template-rows: auto;
-  gap: 20px; /* Espacio entre filas y columnas */
-}
-```
-
-### 5.2 Conceptos Avanzados de Grid <a name="grid-conceptos"></a>
-
-Para dominar Grid, necesitas conocer estas herramientas que hacen que el diseño sea realmente "mágico" y adaptable:
-
-* **Unidad `fr` (Fraction)**: Representa una fracción del espacio libre. Si tienes `1fr 2fr`, el segundo elemento ocupará el doble de espacio que el primero.
-* **`repeat()`**: Evita escribir lo mismo varias veces. 
-  * *Ejemplo:* `grid-template-columns: repeat(3, 1fr);` (Crea 3 columnas iguales).
-* **`minmax()`**: Establece un tamaño mínimo y máximo para una celda.
-  * *Ejemplo:* `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));` (Crea columnas que nunca miden menos de 200px y se ajustan solas).
-* **`grid-template-areas`**: Es la forma más visual de maquetar. Le das nombre a tus elementos y "dibujas" la estructura.
+CSS Grid es el sistema de maquetación más potente de CSS. A diferencia de Flexbox (unidimensional), Grid es **bidimensional**, permitiendo controlar filas y columnas al mismo tiempo. Se usa principalmente para estructuras complejas de layouts y galerías de eventos.
 
 
 
-```css
-.layout {
-  display: grid;
-  grid-template-areas: 
-    "header header"
-    "nav main"
-    "footer footer";
-}
+### 5.1 Propiedades del Contenedor (Padre)
 
-.header { grid-area: header; }
-.sidebar { grid-area: nav; }
-.contenido { grid-area: main; }
-.footer { grid-area: footer; }
-```
-
-
-### 5.2 Conceptos Avanzados de Grid <a name="grid-conceptos"></a>
-
-Para dominar Grid, necesitas conocer estas herramientas que hacen que el diseño sea realmente "mágico" y adaptable:
-
-* **Unidad `fr` (Fraction)**: Representa una fracción del espacio libre. Si tienes `1fr 2fr`, el segundo elemento ocupará el doble de espacio que el primero.
-* **`repeat()`**: Evita escribir lo mismo varias veces. 
-  * *Ejemplo:* `grid-template-columns: repeat(3, 1fr);` (Crea 3 columnas iguales).
-* **`minmax()`**: Establece un tamaño mínimo y máximo para una celda.
-  * *Ejemplo:* `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));` (Crea columnas que nunca miden menos de 200px y se ajustan solas).
-* **`grid-template-areas`**: Es la forma más visual de maquetar. Le das nombre a tus elementos y "dibujas" la estructura.
-
-
-
-```css
-.layout {
-  display: grid;
-  grid-template-areas: 
-    "header header"
-    "nav main"
-    "footer footer";
-}
-
-.header { grid-area: header; }
-.sidebar { grid-area: nav; }
-.contenido { grid-area: main; }
-.footer { grid-area: footer; }
-```
-
-
-
-## 🛠️ Resumen Comparativo: ¿Qué herramienta usar?
-
-Maquetar no se trata de elegir una sola herramienta, sino de combinarlas según el problema. Aquí tienes una regla rápida para decidir:
-
-| Situación | Herramienta Ideal | Por qué |
+| Propiedad | Descripción | Valores comunes / Ejemplos |
 | :--- | :--- | :--- |
-| **Superponer** elementos (un badge sobre una foto). | `position: absolute` | Saca al elemento del flujo normal del documento. |
-| **Menú** de navegación o alinear iconos/botones. | **Flexbox** | Control total sobre la alineación y el espacio en un solo eje. |
-| **Layout principal** (Header, Sidebar, Main, Footer). | **CSS Grid** | Control bidimensional perfecto (filas y columnas a la vez). |
-| **Barra superior** que te sigue al hacer scroll. | `position: sticky` | Mantiene el elemento visible dentro de su contenedor padre. |
+| **`display: grid`** | Activa el contexto de rejilla. | Se observa la cuadrícula en el inspector web. |
+| **`grid-template-columns`** | Define el ancho de las columnas. | `200px 1fr 1fr`, `repeat(3, 1fr)` |
+| **`grid-template-rows`** | Define el alto de las filas. | `100px auto 200px` |
+| **`grid-auto-rows`** | Alto para filas creadas automáticamente. | `minmax(100px, auto)` |
+| **`justify-items`** | Alinea contenido dentro de la celda (H). | `start`, `center`, `end`, `stretch` |
+| **`align-items`** | Alinea contenido dentro de la celda (V). | `start`, `center`, `end`, `stretch` |
+| **`gap`** | Espacio entre celdas. | `10px`, `1rem 2rem` (fila columna) |
 
+### 💡 Herramientas Clave: fr, repeat y minmax
 
+* **Unidad `fr`**: Fracción del espacio libre. Si tienes `1fr 2fr`, la segunda columna será el doble de ancha.
+* **`repeat(n, valor)`**: Repite un patrón. `repeat(12, 1fr)` crea 12 columnas iguales.
+* **`minmax(min, max)`**: Garantiza que una celda no colapse. `minmax(200px, 1fr)` nunca medirá menos de 200px.
+* **`auto-fill` / `auto-fit`**: Permite que el navegador decida cuántas columnas caben según el tamaño de pantalla.
+
+### 5.2 Propiedades de los Hijos (Items)
+
+Grid permite posicionar elementos en cualquier sitio, ¡incluso encimarlos sin usar `position` absoluto!
+
+| Propiedad | Descripción | Uso con `span` |
+| :--- | :--- | :--- |
+| **`grid-column-start`** | Línea donde inicia la columna. | `1` |
+| **`grid-column-end`** | Línea donde termina la columna. | `3` (termina en la línea 3) |
+| **`grid-column`** | Atajo (start / end). | `1 / 4` o `1 / span 3` (ocupa 3 celdas) |
+| **`grid-row`** | Atajo para filas. | `2 / span 2` (ocupa 2 filas) |
+
+### 🕹️ Ejemplo: Layout de 11 bloques
+
+**HTML:**
+<div class="grid-layout">
+  <div class="item">1</div>
+  <div class="item main">2 (Principal)</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+  <div class="item">6</div>
+  <div class="item">7</div>
+  <div class="item">8</div>
+  <div class="item">9</div>
+  <div class="item">10</div>
+  <div class="item">11</div>
+</div>
+
+**CSS:**
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+
+.main {
+  grid-column: span 2; /* Ocupa 2 columnas */
+  grid-row: span 2;    /* Ocupa 2 filas */
+  background-color: #f39c12 !important;
+}
+
+.item {
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2980b9;
+}
 
 ---
 
-## 🚀 Conclusión y Siguientes Pasos
+## 6. Media Queries: Diseño Responsivo <a name="media-queries"></a>
 
-Dominar la maquetación moderna es la base de cualquier frontend. No intentes memorizar cada propiedad; lo más importante es entender **la jerarquía entre contenedores (padres) e hijos**.
-
-
-
-> **💡 Consejo de un par:** Cuando algo no se alinee como esperas, abre las herramientas de desarrollador (`F12` o `Click derecho > Inspeccionar`) y busca las etiquetas **flex** o **grid** junto a los elementos. El navegador te mostrará las líneas guía y el espacio de los "gaps", lo cual es clave para debugear visualmente.
-
----
-
-### 🎨 ¿Qué te gustaría practicar ahora?
-¿Quieres que te pase el **código HTML/CSS** de un ejemplo real que combine las tres técnicas (por ejemplo, una "Card de Producto" con precio flotante), o prefieres que veamos cómo hacer este diseño **Responsive** para móviles?
+Las Media Queries permiten aplicar estilos diferentes según las características del dispositivo (principalmente el ancho de pantalla). Es lo que hace que un sitio sea **Mobile First**.
 
 
 
+### Sintaxis Básica
 
+```css
+/* Estilos generales (Mobile por defecto) */
+.layout {
+  display: flex;
+  flex-direction: column;
+}
 
-
+/* Tablet y Desktop (Pantallas mayores a 768px) */
+@media (min-width: 768px) {
+  .layout {
+    flex-direction: row;
+    background-color: lightblue;
+  }
+}
 
 "Pásame la tabla X en un bloque de código (o chunk) de texto plano."
