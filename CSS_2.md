@@ -7,14 +7,26 @@ Para una consulta técnica profunda, siempre es recomendable visitar la document
 > * **[MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS)**
 > * **[W3Schools - Tutorial CSS](https://www.w3schools.com/css/)**
 
+
+Se puede usar la siguiente web para hacer pruebas en línea:
+>🛠️ **Herramienta para pruebas**
+>Se puede usar la siguiente web para hacer pruebas en línea, ver cambios en tiempo real y compartir código:
+> * **[Codi.link - Editor de Código Online](https://codi.link/)**
+
 ---
 
 ## 🔍 Índice de Contenidos
+
 1. [Conceptos Base: Display y Modelo de Caja](#1-conceptos-base)
-2. [Posicionamiento (`position`)](#2-posicionamiento)
-3. [Z-Index y Apilamiento](#3-z-index)
-4. [Flexbox: Diseño Unidimensional](#4-flexbox)
+2. [Posicionamiento (`position`)](#posicionamiento)
+3. [Z-Index y Apilamiento](#z-index)
+4. [Flexbox: Diseño Unidimensional](#flexbox)
+   * [4.1 Propiedades del Contenedor (Padre)](#41-propiedades-del-contenedor-padre)
+   * [4.2 Propiedades de los Hijos (Items)](#42-propiedades-de-los-hijos-items)
 5. [CSS Grid: Diseño Bidimensional](#5-css-grid)
+   * [5.1 Propiedades del Contenedor (Padre)](#51-propiedades-del-contenedor-padre)
+   * [5.2 Propiedades de los Hijos (Items)](#52-propiedades-de-los-hijos-items)
+6. [Media Queries: Diseño Responsivo](#media-queries)
 
 ---
 
