@@ -11,7 +11,7 @@ Para una consulta técnica profunda, siempre es recomendable visitar la document
 Se puede usar la siguiente web para hacer pruebas en línea:
 >🛠️ **Herramienta para pruebas**
 >Se puede usar la siguiente web para hacer pruebas en línea, ver cambios en tiempo real y compartir código:
-> * **[Codi.link - Editor de Código Online](https://codi.link/)**
+> * **[codi.link - Editor de código online](https://codi.link/)**
 
 ---
 
