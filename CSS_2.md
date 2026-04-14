@@ -21,14 +21,9 @@ Se puede usar la siguiente web para hacer pruebas en línea o practicar display:
 
 1. [Conceptos Base: Display y Modelo de Caja](#1-conceptos-base)
 2. [Posicionamiento (position)](#posicionamiento)
-3. [Z-Index y Apilamiento](#z-index)
-4. [Flexbox: Diseño Unidimensional](#flexbox)
-   4.1 Propiedades del Contenedor (Padre)
-   4.2 Propiedades de los Hijos (Items)
-5. [CSS Grid: Diseño Bidimensional](#5-css-grid)
-   5.1 Propiedades del Contenedor (Padre)
-   5.2 Propiedades de los Hijos (Items)
-6. [Media Queries: Diseño Responsivo](#media-queries)
+3. [CSS Flex: Diseño Unidimensional](#flexbox)
+4. [CSS Grid: Diseño Bidimensional](#5-css-grid)
+5. [Media Queries: Diseño Responsivo](#media-queries)
 
 ---
 
@@ -418,6 +413,4 @@ ejemplo CSS para media query
   border: 1px solid #999;
 }
 ```
-
-
 
