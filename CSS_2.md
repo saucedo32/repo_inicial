@@ -1,4 +1,4 @@
-# 🌐 Guía de Referencia Rápida: CSS Maquetación moderna (layout)
+# 🌐 Guía de Referencia Rápida: CSS - layout
 
 Esta guía está diseñada para proporcionar una base amplia y rápida sobre la forma de distribuir nuestros elementos en la pantalla (layout). <br>
 Para una consulta profunda y técnica, siempre es recomendable visitar la documentación oficial.
