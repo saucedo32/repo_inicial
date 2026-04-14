@@ -1,51 +1,56 @@
-# 🌐 Guía de Referencia Rápida: CSS Maquetación Moderna
+# 🌐 Guía de Referencia Rápida: CSS Maquetación moderna (layout)
 
-Esta guía resume los fundamentos de maquetación con CSS. <br>
-Para una consulta técnica profunda, siempre es recomendable visitar la documentación oficial.
+Esta guía está diseñada para proporcionar una base amplia y rápida sobre la forma de distribuir nuestros elementos en la pantalla (layout). <br>
+Para una consulta profunda y técnica, siempre es recomendable visitar la documentación oficial.
 
-> 📚 **Documentación recomendada:**
-> * **[MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS)**
-> * **[W3Schools - Tutorial CSS](https://www.w3schools.com/css/)**
+> 📚 **Documentación recomendada:** Para profundizar en cada propiedad y ver ejemplos interactivos, te recomendamos visitar:
+>* **[MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS)**: La referencia técnica más completa y actualizada mantenida por la comunidad de Mozilla.
+>* **[W3Schools - Tutorial CSS](https://www.w3schools.com/css/)**: Ideal para aprendizaje rápido con ejemplos interactivos y editores en vivo.
 
+---
 
-Se puede usar la siguiente web para hacer pruebas en línea:
+Se puede usar la siguiente web para hacer pruebas en línea o practicar display:flex y display:grid:
 >🛠️ **Herramienta para pruebas**
 >Se puede usar la siguiente web para hacer pruebas en línea, ver cambios en tiempo real y compartir código:
 > * **[codi.link - Editor de código online](https://codi.link/)**
 
+>🎮 **Herramienta para practicar**
+>Práctica de display:flex:
+> * **[Flexbox Froggy](https://flexboxfroggy.com/#es)**
+>Práctica de display:grid:
+> * **[Grid Garden](https://cssgridgarden.com/#es)**
 ---
 
 ## 🔍 Índice de Contenidos
 
-1. [Conceptos Base: Display y Modelo de Caja](#1-conceptos-base)
-2. [Posicionamiento (`position`)](#posicionamiento)
-3. [Z-Index y Apilamiento](#z-index)
-4. [Flexbox: Diseño Unidimensional](#flexbox)
-   * [4.1 Propiedades del Contenedor (Padre)](#41-propiedades-del-contenedor-padre)
-   * [4.2 Propiedades de los Hijos (Items)](#42-propiedades-de-los-hijos-items)
-5. [CSS Grid: Diseño Bidimensional](#5-css-grid)
-   * [5.1 Propiedades del Contenedor (Padre)](#51-propiedades-del-contenedor-padre)
-   * [5.2 Propiedades de los Hijos (Items)](#52-propiedades-de-los-hijos-items)
-6. [Media Queries: Diseño Responsivo](#media-queries)
+1. Conceptos Base: Display y Modelo de Caja
+2. Posicionamiento (position)
+3. Z-Index y Apilamiento
+4. Flexbox: Diseño Unidimensional
+   4.1 Propiedades del Contenedor (Padre)
+   4.2 Propiedades de los Hijos (Items)
+5. CSS Grid: Diseño Bidimensional
+   5.1 Propiedades del Contenedor (Padre)
+   5.2 Propiedades de los Hijos (Items)
+6. Media Queries: Diseño Responsivo
 
 ---
 
-## 1. Conceptos Base: display y Modelo de Caja <a name="1-conceptos-base"></a>
+## 1. Conceptos iniciales: display y Modelo de Caja <a name="1-conceptos-base"></a>
 
 Lo que se desarrollará requiere conocimiento previo del modelo de la caja.<br>
 Recordemos que tenemos dos tipos de elementos:
 * `div` elementos en bloque
 * `span` elementos en línea
 Si cambiamos las propiedades background (color), width y height de un `span` no notaremos cambio en su tamaño por ser un bloque inline.<br>
-Para cambiar un elemento en línea a en bloque existe la propiedad: `display`: inline/block; 
+Para cambiar un elemento en línea a en bloque existe la propiedad: `display`: inline/block/inline-block; 
 <br>
 En la guía vamos a ver cómo trabajar con la propiedad `display` para ordenar el contenido a nuestro gusto: inline, block, **flex** y **grid**.
 
 
-
 ### Propiedad display (comportamiento de la caja)
 Antes de ordenar cajas, debemos entender cómo se comportan.<br>
-Los valores que puede tener la propiedad `display` (colocada en el elemento contenedor) son:
+Los valores que puede tener la propiedad `display` (colocada en el elemento contenedor o padre) son:
 
 | Valor | Descripción | Comportamiento | Ejemplos Comunes |
 | :--- | :--- | :--- | :--- |
@@ -84,7 +89,7 @@ Para evitar que el `padding` y el `border` expandan el tamaño real de tus cajas
 
 ---
 
-## 2. Posicionamiento: Atributo `position` <a name="posicionamiento"></a>
+## 2. Position para layout: propiedad `position` <a name="posicionamiento"></a>
 
 La propiedad `position` determina cómo se ubica un elemento en el documento. Por defecto, las cajas se ubican de arriba a abajo y de izquierda a derecha (`static`).
 
@@ -146,47 +151,60 @@ La propiedad `position` determina cómo se ubica un elemento en el documento. Po
 ```
 
 
----
-
-## 3. Z-Index y Contexto de Apilamiento <a name="z-index"></a>
+### 2.1 Z-Index y Contexto de Apilamiento <a name="z-index"></a>
 
 El `z-index` define qué elemento se muestra "encima" de otro en el eje Z (profundidad). 
 
 > **Recordatorio:** Para que un `z-index` funcione, el elemento **debe** tener una propiedad `position` distinta a `static` (usualmente `relative` en el padre).
 
 ```html
-<div class="escenario">
-  <div class="capa capa-1">Z-Index: 1</div>
-  <div class="capa capa-2">Z-Index: 10</div>
-  <div class="capa capa-3">Z-Index: 5</div>
-</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
 ```
 
 
 ```css
-.contenedor-padre {
-  position: relative; /* Contexto de apilamiento */
+  
+div {
+    border: 1px solid;
+    opacity: .9;
+    width: 200px;
+    height: 200px;
+    background: #09f;
+    margin-top: -150px;
+    box-shadow: 0 0 5px #000000dd;
+    position: relative; /* Contexto de apilamiento */
 }
 
-.caja-delantera {
-  position: absolute;
-  z-index: 10; /* Valor más alto, se ve primero */
+
+div:first-child {
+    background: #f09;
+    z-index: 1;             /* queda atrás por tener el menor z-index */
 }
 
-.caja-fondo {
-  position: absolute;
-  z-index: 1; /* Valor bajo, queda detrás */
+
+div:nth-child(2) {
+    background: rgb(4, 17, 118);
+    color: white;
+    z-index: 2;             /* queda en la segunda posición */
+}
+
+
+div:last-child {
+    background: rgb(255, 140, 0);
+    z-index: 3;             /* queda delante por tener el mayor z-index */
 }
 ```
 
 
 ---
 
-## 4. Flexbox: diseño unidimensional <a name="flexbox"></a>
+## 3. display:fex: Flexbox, diseño UNIDIMENSIONAL <a name="flexbox"></a>
 
 Flexbox organiza elementos en un solo eje (fila o columna). Se activa con `display: flex;` en el contenedor padre.
 
-### 4.1 Propiedades del Contenedor (padre)
+### 3.1 Propiedades del Contenedor (padre)
 
 | Propiedad | Valores comunes | Efecto |
 | :--- | :--- | :--- |
@@ -198,7 +216,7 @@ Flexbox organiza elementos en un solo eje (fila o columna). Se activa con `displ
 
 
 
-### 4.2 Propiedades de los hijos (items)
+### 3.2 Propiedades de los hijos (items)
 
 | Propiedad | Función | Uso típico |
 | :--- | :--- | :--- |
@@ -243,13 +261,13 @@ ejemplo flexbox CSS
 
 ---
 
-## 5. CSS Grid: Diseño Bidimensional <a name="5-css-grid"></a>
+## 4. display:grid: GRID, diseño BIDIMENSIONAL  <a name="5-css-grid"></a>
 
-CSS Grid es el sistema de maquetación más potente de CSS. A diferencia de Flexbox (unidimensional), Grid es **bidimensional**, permitiendo controlar filas y columnas al mismo tiempo. Se usa principalmente para estructuras complejas de layouts y galerías de eventos.
+CSS Grid es el sistema de maquetación más potente de CSS. A diferencia de Flexbox (unidimensional), Grid es **bidimensional**, permitiendo controlar filas y columnas al mismo tiempo. Se usa principalmente para estructuras complejas de layouts y galerías de imágenes.
 
 
 
-### 5.1 Propiedades del Contenedor (Padre)
+### 4.1 Propiedades del Contenedor (Padre)
 
 | Propiedad | Descripción | Valores comunes / Ejemplos |
 | :--- | :--- | :--- |
@@ -268,7 +286,7 @@ CSS Grid es el sistema de maquetación más potente de CSS. A diferencia de Flex
 * **`minmax(min, max)`**: Garantiza que una celda no colapse. `minmax(200px, 1fr)` nunca medirá menos de 200px.
 * **`auto-fill` / `auto-fit`**: Permite que el navegador decida cuántas columnas caben según el tamaño de pantalla.
 
-### 5.2 Propiedades de los Hijos (Items)
+### 4.2 Propiedades de los Hijos (Items)
 
 Grid permite posicionar elementos en cualquier sitio, ¡incluso encimarlos sin usar `position` absoluto!
 
@@ -281,7 +299,9 @@ Grid permite posicionar elementos en cualquier sitio, ¡incluso encimarlos sin u
 
 ### 🕹️ Ejemplo: Layout de 11 bloques
 
-**HTML:**
+
+ejemplo grid HTML
+```html
 <div class="grid-layout">
   <div class="item">1</div>
   <div class="item main">2 (Principal)</div>
@@ -295,6 +315,7 @@ Grid permite posicionar elementos en cualquier sitio, ¡incluso encimarlos sin u
   <div class="item">10</div>
   <div class="item">11</div>
 </div>
+```
 
 ejemplo grid CSS
 ```css
@@ -324,12 +345,22 @@ ejemplo grid CSS
 
 ---
 
-## 6. Media Queries: Diseño Responsivo <a name="media-queries"></a>
+## 5. Media Queries: Diseño Responsivo <a name="media-queries"></a>
 
 Las Media Queries permiten aplicar estilos diferentes según las características del dispositivo (principalmente el ancho de pantalla). Es lo que hace que un sitio sea **Mobile First**.
 
 
 ### Sintaxis Básica
+
+ejemplo media query HTML
+```html
+<main class="layout">
+        <section class="columna">Columna 1</section>
+        <section class="columna">Columna 2</section>
+        <section class="columna">Columna 3</section>
+    </main>
+```
+
 
 ejemplo media query CSS
 ```css
@@ -392,7 +423,3 @@ ejemplo CSS para media query
 }
 ```
 
-
-
-
-"Pásame la tabla X en un bloque de código (o chunk) de texto plano."
