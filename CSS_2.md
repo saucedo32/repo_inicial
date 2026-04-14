@@ -7,32 +7,28 @@ Para una consulta profunda y técnica, siempre es recomendable visitar la docume
 >* **[MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS)**: La referencia técnica más completa y actualizada mantenida por la comunidad de Mozilla.
 >* **[W3Schools - Tutorial CSS](https://www.w3schools.com/css/)**: Ideal para aprendizaje rápido con ejemplos interactivos y editores en vivo.
 
----
-
 Se puede usar la siguiente web para hacer pruebas en línea o practicar display:flex y display:grid:
 >🛠️ **Herramienta para pruebas**
 >Se puede usar la siguiente web para hacer pruebas en línea, ver cambios en tiempo real y compartir código:
 > * **[codi.link - Editor de código online](https://codi.link/)**
 
 >🎮 **Herramienta para practicar**
->Práctica de display:flex:
-> * **[Flexbox Froggy](https://flexboxfroggy.com/#es)**
->Práctica de display:grid:
-> * **[Grid Garden](https://cssgridgarden.com/#es)**
+> * **[Flexbox Froggy - Práctica de display:flex](https://flexboxfroggy.com/#es)**
+> * **[Grid Garden - Práctica de display:grid](https://cssgridgarden.com/#es)**
 ---
 
 ## 🔍 Índice de Contenidos
 
-1. Conceptos Base: Display y Modelo de Caja
-2. Posicionamiento (position)
-3. Z-Index y Apilamiento
-4. Flexbox: Diseño Unidimensional
+1. [Conceptos Base: Display y Modelo de Caja](#1-conceptos-base)
+2. [Posicionamiento (position)](#posicionamiento)
+3. [Z-Index y Apilamiento](#z-index)
+4. [Flexbox: Diseño Unidimensional](#flexbox)
    4.1 Propiedades del Contenedor (Padre)
    4.2 Propiedades de los Hijos (Items)
-5. CSS Grid: Diseño Bidimensional
+5. [CSS Grid: Diseño Bidimensional](#5-css-grid)
    5.1 Propiedades del Contenedor (Padre)
    5.2 Propiedades de los Hijos (Items)
-6. Media Queries: Diseño Responsivo
+6. [Media Queries: Diseño Responsivo](#media-queries)
 
 ---
 
@@ -45,7 +41,7 @@ Recordemos que tenemos dos tipos de elementos:
 Si cambiamos las propiedades background (color), width y height de un `span` no notaremos cambio en su tamaño por ser un bloque inline.<br>
 Para cambiar un elemento en línea a en bloque existe la propiedad: `display`: inline/block/inline-block; 
 <br>
-En la guía vamos a ver cómo trabajar con la propiedad `display` para ordenar el contenido a nuestro gusto: inline, block, **flex** y **grid**.
+En la guía vamos a ver cómo trabajar con la propiedad `display` para ordenar el contenido a nuestro gusto: inline, block, *flex* y *grid*.
 
 
 ### Propiedad display (comportamiento de la caja)
@@ -422,4 +418,6 @@ ejemplo CSS para media query
   border: 1px solid #999;
 }
 ```
+
+
 
